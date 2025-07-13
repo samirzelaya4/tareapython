@@ -1,16 +1,14 @@
 import os
 os.system("cls")
 
-ventas = int( input("Ventas= "))
+donacion = int( input("donacion = "))
 
-sueldo_basico = 500
-comision = ventas * 0.09 
+centro_salud = donacion * 0.25
+comedor_infantil = donacion * 0.35
+escuela_infantil = donacion * 0.25
+asilo_ancianos = donacion - (centro_salud + comedor_infantil + escuela_infantil)
 
-sueldo_bruto = sueldo_basico + comision
-descuento = sueldo_bruto * 0.11
-sueldo_neto = sueldo_bruto - descuento
-
-print(f"Comision= {comision:.2f}")
-print(f"Sueldo bruto {sueldo_bruto:2f}")
-print(f"Descuento= {descuento:.2f}")
-print(f"Sueldo neto= {sueldo_neto:.2f}")
+print(f"Centro de salud= {centro_salud:.2f}")
+print(f"Comedor infantil= {comedor_infantil:.2f}")
+print(f"Escuela infantil= {escuela_infantil:.2f}")
+print(f"Asilo de ancianos= {asilo_ancianos:.2f}")
